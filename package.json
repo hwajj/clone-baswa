@@ -51,5 +51,17 @@
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hwajj/clone-baswa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hwajj/clone-baswa/issues"
+  },
+  "homepage": "https://github.com/hwajj/clone-baswa#readme",
+  "description": ""
 }

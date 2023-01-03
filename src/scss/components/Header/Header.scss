@@ -1,0 +1,17 @@
+.nav-area {
+  top: 0;
+  min-height: 130px;
+
+  width: 100vw;
+  padding: 1rem 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    width: 10rem;
+  }
+}
+
+.none {
+  display: none;
+}
