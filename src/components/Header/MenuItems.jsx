@@ -1,27 +1,78 @@
-import React from 'react';
-import { HEADER_MENU_TYPE } from '../../utils/constant';
-import Dropdown from './Dropdown';
+import React, { useEffect, useState, useRef } from "react";
+import { HEADER_MENU_TYPE } from "../../utils/constant";
+import Dropdown from "./Dropdown";
 
-import { AiFillCaretDown } from 'react-icons/ai';
+import "../../scss/components/Header/MenuItems.scss";
+import { AiFillCaretDown } from "react-icons/ai";
+import { openModalAction } from "../../redux/reducer/modal";
+import { useDispatch } from "react-redux";
 const MenuItems = ({ items }) => {
+  const dispatch = useDispatch();
+  const [dropdown, setDropdown] = useState(false);
+
+  let ref = useRef();
+
+  useEffect(() => {
+    const handler = (event) => {
+      console.log(ref.current);
+      console.log(event.target);
+      if (dropdown && ref.current && !ref.current.contains(event.target)) {
+        setDropdown(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    document.addEventListener("touchstart", handler);
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", handler);
+      document.removeEventListener("touchstart", handler);
+    };
+  }, [dropdown]);
+
+  const onMouseEnter = () => {
+    window.innerWidth > 960 && setDropdown(true);
+  };
+
+  const onMouseLeave = () => {
+    window.innerWidth > 960 && setDropdown(false);
+  };
+
+  const closeDropdown = () => {
+    dropdown && setDropdown(false);
+  };
+
+  const openModal = () => {
+    items.mode === HEADER_MENU_TYPE.MODAL &&
+      dispatch(openModalAction({ payload: { isOpenModal: true } }));
+  };
   return (
-    <li className='menu-items'>
+    <li
+      key={items.title}
+      className="menu-items"
+      ref={ref}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onClick={closeDropdown}
+    >
       {items.submenu ? (
         <>
-          <span
+          <button
+            aria-expanded={dropdown ? "true" : "false"}
+            aria-haspopup="menu"
             className={
               items.mode === HEADER_MENU_TYPE.MODAL
-                ? 'modal'
+                ? "modal"
                 : items.mode === HEADER_MENU_TYPE.LANGUAGE
-                ? 'language'
-                : ''
+                ? "language"
+                : ""
             }
-            aria-haspopup='menu'
+            onClick={openModal}
           >
-            {items.title}{' '}
-          </span>
-          {items.mode === HEADER_MENU_TYPE.LANGUAGE && <AiFillCaretDown />}
-          <Dropdown submenus={items.submenu} />
+            {items.title}{" "}
+            {items.mode === HEADER_MENU_TYPE.LANGUAGE && <AiFillCaretDown />}
+          </button>
+
+          <Dropdown dropdown={dropdown} submenus={items.submenu} />
         </>
       ) : (
         <a href={items.url}>{items.title}</a>
