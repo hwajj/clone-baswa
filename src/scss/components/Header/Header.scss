@@ -6,6 +6,7 @@ header {
   top: 0;
   //background: #fff;
   z-index: 10;
+  transition: background-color 0.2s ease-in;
 
   .nav-area {
     top: 0;
@@ -19,13 +20,11 @@ header {
       width: 10rem;
     }
   }
-
 }
 
 .white {
   background: #fff;
 }
-
 
 .none {
   display: none;
