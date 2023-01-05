@@ -1,0 +1,41 @@
+.HeroHome {
+  height: 40rem;
+  width: 100vw;
+ // border: 1px solid orangered;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .HeroHome-slider {
+    height: 80%;
+
+    .slider-container {
+      display: flex;
+      position: relative;
+      height: 100%;
+    }
+  }
+
+  .bullets {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+     & > span {
+       border: 10px solid #ece2db;
+       margin: 0.3rem;
+       border-radius: 50%;
+       cursor: pointer;
+       transition: border 0.2s ease-out;
+     }
+
+    .clicked {
+      border-color:  #d5c1b4;
+    }
+
+
+  }
+}
+
+

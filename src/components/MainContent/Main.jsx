@@ -1,11 +1,10 @@
 import React from "react";
-import "../../scss/components/MainContent/Main.scss";
+import "scss/components/MainContent/Main.scss";
+import HeroHome from "./HeroHome";
 const Main = () => {
   return (
     <main>
-      <section className="HeroHome">
-        <div className="HeroHome__slider"></div>
-      </section>
+      <HeroHome />
       <article className="content"></article>
       <section className="productFinder">
         <div className="HeroHome__slider"></div>

@@ -1,4 +1,22 @@
 main {
-  height: 100vh;
-  position:absolute;
+  position:relative;
+  width: 100vw;
+  border-bottom: 1px solid black;
+
+
+  section {
+
+    width: 100%;
+   // height: calc(100vh - 7rem);
+    height: calc(100vh - 7rem);
+    border-bottom: 1px solid red;
+  }
+
+  article {
+    width: 100%;
+    // height: calc(100vh - 7rem);
+    height: 20rem;
+    border-bottom: 1px solid blue;
+  }
 }
+

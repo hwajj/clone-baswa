@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
-import logoSvg from "../../assets/logo.svg";
-import "../../scss/components/Header/Header.scss";
+import logoSvg from "assets/logo.svg";
+import "scss/components/Header/Header.scss";
 import { NavLink } from "react-router-dom";
-import Navbar from "./Navbar";
+import Navbar from "components/Header/Navbar";
 
 const Header = () => {
   return (

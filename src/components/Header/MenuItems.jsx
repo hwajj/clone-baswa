@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
-import { HEADER_MENU_TYPE } from "../../utils/constant";
-import Dropdown from "./Dropdown";
+import { HEADER_MENU_TYPE } from "utils/constant";
+import Dropdown from "components/Header/Dropdown";
 
-import "../../scss/components/Header/MenuItems.scss";
+import "scss/components/Header/MenuItems.scss";
 import { AiFillCaretDown } from "react-icons/ai";
-import { openModalAction } from "../../redux/reducer/modal";
+import { openModalAction } from "redux/reducer/modal";
 import { useDispatch } from "react-redux";
 const MenuItems = ({ items }) => {
   const dispatch = useDispatch();
@@ -14,9 +14,9 @@ const MenuItems = ({ items }) => {
 
   useEffect(() => {
     const handler = (event) => {
-      console.log(ref.current);
-      console.log(event.target);
       if (dropdown && ref.current && !ref.current.contains(event.target)) {
+        console.log(ref.current);
+        console.log(event.target);
         setDropdown(false);
       }
     };

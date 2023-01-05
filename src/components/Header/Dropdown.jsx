@@ -1,5 +1,5 @@
 import React from "react";
-import "../../scss/components/Header/Dropdown.scss";
+import "scss/components/Header/Dropdown.scss";
 const Dropdown = ({ submenus, dropdown }) => {
   return (
     <ul className={`submenu-container ${dropdown ? "show" : ""}`}>
