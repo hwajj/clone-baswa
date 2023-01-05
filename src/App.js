@@ -1,16 +1,19 @@
+import React, { useEffect, useRef } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Main from "components/MainContent/Main";
 import Header from "components/Header/Header";
 import { sampleModalSelector } from "redux/reducer/modal";
-import GlobalFonts from "scss/fonts/font";
 import Modal from "components/Modal/Modal";
+import useIntersectionObserver from "./utils/hook/useIntersectionObserver";
+
 function App() {
+  const target = useRef(null);
   const modalState = useSelector(sampleModalSelector);
   console.log(modalState);
+
   return (
     <div className="App">
-      <GlobalFonts />
       <Header />
       {modalState.isOpenModal && <Modal />}
       <Routes>

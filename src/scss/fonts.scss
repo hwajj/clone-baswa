@@ -1,0 +1,32 @@
+$FlamaBook: "/assets/fonts/FlamaBook Regular.otf";
+$FlamaBookLight: "/assets/fonts/Flama-Light.woff";
+$FlamaBookBold: "/assets/fonts/Flama-Bold.otf";
+
+@font-face {
+  font-family: 'FlamaBook';
+  font-weight: 900;
+  src: url($FlamaBookBold) format('otf')
+}
+@font-face {
+  font-family: 'FlamaBook';
+  font-weight: 400;
+  src: url($FlamaBook) format('otf')
+}
+
+@font-face {
+  font-family: 'FlamaBook';
+  font-weight: 300;
+  src: url($FlamaBook) format('otf')
+}
+
+@font-face {
+  font-family: 'FlamaBook';
+  font-weight: 200;
+  src: url($FlamaBook) format('otf')
+}
+
+@font-face {
+  font-family: 'FlamaBook';
+  font-weight: 200;
+  src: url($FlamaBookLight) format('woff')
+}

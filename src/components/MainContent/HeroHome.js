@@ -10,12 +10,12 @@ const HeroHome = () => {
   const bulletRef = useRef(null);
   const sliderContainerRef = useRef(null);
   const innerSliderRef = useRef(null);
-  const slideImage = () => {
-    // sliderContainerRef.current.style.transform = `translateX(${
-    //   -innerSliderRef.current.clientWidth * event.target.dataset.index
-    // }px)`;
+  const slideImage = (event) => {
+    sliderContainerRef.current.style.transform = `translateX(${
+      -100 * event.target.dataset.index
+    }%)`;
 
-    setActive(() => event.target.dataset.index);
+    // setActive(event.target.dataset.index);
   };
 
   return (
@@ -24,19 +24,26 @@ const HeroHome = () => {
         <div className="slider-container" ref={sliderContainerRef}>
           {slideContentsData.map((data, index) => (
             <SlideContent
+              key={index}
               slideRef={innerSliderRef}
               data={data}
               index={index}
               active={active}
             />
           ))}
-          <div></div>
         </div>
       </div>
 
       <div className="bullets">
         {slideContentsData.map((data, index) => {
-          return <Bullet idx={index} active={active} slideImage={slideImage} />;
+          return (
+            <Bullet
+              key={index}
+              idx={index}
+              active={active}
+              slideImage={slideImage}
+            />
+          );
         })}
       </div>
     </section>

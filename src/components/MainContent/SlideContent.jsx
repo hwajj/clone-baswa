@@ -4,7 +4,8 @@ const SlideContent = ({ active, data, index, slideRef }) => {
   return (
     <div
       ref={slideRef}
-      className={`slide-content ${active == index ? "active" : ""}`}
+      className="slide-content"
+      //className={`slide-content ${active == index ? "active" : ""}`}
     >
       <div>
         <div className="number">{index + 1} - 4</div>

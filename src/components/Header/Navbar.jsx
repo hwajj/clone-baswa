@@ -9,7 +9,7 @@ const Navbar = () => {
     <div className="nav-wrapper">
       <ul className="menus">
         {menuItemInfo.map((menu, index) => {
-          return <MenuItems items={menu} />;
+          return <MenuItems key={index} items={menu} />;
         })}
       </ul>
     </div>
