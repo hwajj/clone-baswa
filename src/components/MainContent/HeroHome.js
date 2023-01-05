@@ -6,14 +6,15 @@ import Bullet from "./Bullets";
 import "scss/components/MainContent/HeroHome.scss";
 
 const HeroHome = () => {
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState(0);
   const bulletRef = useRef(null);
   const sliderContainerRef = useRef(null);
   const innerSliderRef = useRef(null);
   const slideImage = () => {
-    sliderContainerRef.current.style.transform = `translateX(${
-      -innerSliderRef.current.clientWidth * event.target.dataset.index
-    }px)`;
+    // sliderContainerRef.current.style.transform = `translateX(${
+    //   -innerSliderRef.current.clientWidth * event.target.dataset.index
+    // }px)`;
+
     setActive(() => event.target.dataset.index);
   };
 
@@ -22,7 +23,12 @@ const HeroHome = () => {
       <div className="HeroHome-slider">
         <div className="slider-container" ref={sliderContainerRef}>
           {slideContentsData.map((data, index) => (
-            <SlideContent slideRef={innerSliderRef} data={data} index={index} />
+            <SlideContent
+              slideRef={innerSliderRef}
+              data={data}
+              index={index}
+              active={active}
+            />
           ))}
           <div></div>
         </div>

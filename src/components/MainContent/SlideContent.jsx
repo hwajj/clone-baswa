@@ -1,8 +1,11 @@
 import React from "react";
 import "scss/components/MainContent/SlideContent.scss";
-const SlideContent = ({ data, index, slideRef }) => {
+const SlideContent = ({ active, data, index, slideRef }) => {
   return (
-    <div ref={slideRef} className="slide-content">
+    <div
+      ref={slideRef}
+      className={`slide-content ${active == index ? "active" : ""}`}
+    >
       <div>
         <div className="number">{index + 1} - 4</div>
         <div className="title">{data.title}</div>
