@@ -16,11 +16,15 @@ html, body {
   position: absolute;
   top: -94px;
   left: -82px;
-  z-index: 2;
   display: block;
   width: 308px;
   height: 360px;
   pointer-events: none;
   background-size: 100% auto;
   opacity: .2;
+}
+
+.modal-height {
+  max-height: 102rem;
+  overflow: hidden;
 }

@@ -21,9 +21,40 @@
     justify-content: flex-end;
     height: 100%;
     width: 100%;
-    gap : 1.2rem;
+  //  gap : 1.2rem;
     //border:1px solid red;
 
 
   }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-wrapper {
+    .menus {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      right: 0;
+    //  border: 1px solid black;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      & > span {
+        width: 26px;
+        height: 2px;
+        background: black;
+        margin: 3px;
+
+      }
+      & > span:nth-of-type(2) {
+        width: 24px;
+      }
+    }
+  }
+
 }

@@ -5,7 +5,7 @@
   width: 10%;
 }
 .menu-items {
-  //border:1px solid hotpink;
+ // border:1px solid hotpink;
   height: 100%;
   width: auto;
   display: flex;
@@ -14,7 +14,8 @@
   text-align: left;
   flex-direction: column;
   position: relative;
-  padding: 1rem 0.4rem;
+  padding: 1rem;
+  cursor: pointer;
 
   & > button {
     outline: none;

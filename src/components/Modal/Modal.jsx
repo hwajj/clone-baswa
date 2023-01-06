@@ -11,35 +11,38 @@ const Modal = () => {
     dispatch(closeModalAction({ payload: { isOpenModal: false } }));
   };
   return (
-    <div className="modal-page">
-      <div className="close" onClick={onClose}></div>
-      <div className="title-container">
-        <h3 className="title">Musterbestellung</h3>
-      </div>
+    <div>
+      <div className="modal-page">
+        <div className="close" onClick={onClose}></div>
+        <div className="title-container">
+          <h3 className="title">Musterbestellung</h3>
+        </div>
 
-      <div className="info-container">
-        <form>
-          <div className="info-text">
-            {inputInfo.map((item) => (
-              <ModalInfo item={item} />
-            ))}
+        <div className="info-container">
+          <form>
+            <div className="info-text">
+              {inputInfo.map((item, index) => (
+                <ModalInfo key={index} item={item} />
+              ))}
+            </div>
+          </form>
+        </div>
+
+        <div className="policy-container">
+          <div className="policy-check">
+            <input type="checkbox" />
+            <span> I AGREE TO THE PRIVACY POLICY.</span>
           </div>
-        </form>
-      </div>
-
-      <div className="policy-container">
-        <div className="policy-check">
-          <input type="checkbox" />
-          <span> I AGREE TO THE PRIVACY POLICY.</span>
+          <div className="policy-captcha">
+            <input type="checkbox" />
+            <span> 로봇이 아님다</span>
+          </div>
         </div>
-        <div className="policy-captcha">
-          <input type="checkbox" />
-          <span> 로봇이 아님다</span>
+        <div className="button-container">
+          <button> Absenden</button>
         </div>
       </div>
-      <div className="button-container">
-        <button> Absenden</button>
-      </div>
+      <div className="modal-page-background"></div>
     </div>
   );
 };

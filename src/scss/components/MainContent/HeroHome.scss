@@ -1,10 +1,11 @@
 .HeroHome {
-  height: 40rem;
+  //height: 40rem;
   width: 100vw;
- // border: 1px solid orangered;
+  // border: 1px solid orangered;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: calc(100vh - 7rem);
 
   .HeroHome-slider {
     //border: 5px solid red;

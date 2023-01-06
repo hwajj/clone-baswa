@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { AiFillCaretDown } from "react-icons/ai";
 import menuItemInfo from "./menuItemInfo";
 import MenuItems from "./MenuItems";
-const Navbar = () => {
+const Navbar = ({ setMenuOpen }) => {
   return (
     <div className="nav-wrapper">
       <ul className="menus">
@@ -12,6 +12,11 @@ const Navbar = () => {
           return <MenuItems key={index} items={menu} />;
         })}
       </ul>
+      <div className="hamburger" onClick={setMenuOpen}>
+        <span> </span>
+        <span> </span>
+        <span> </span>
+      </div>
     </div>
   );
 };
