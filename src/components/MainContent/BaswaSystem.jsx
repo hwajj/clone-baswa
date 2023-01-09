@@ -1,9 +1,9 @@
 import React from "react";
 import "scss/components/MainContent/BaswaSystem.scss";
 import layerImg from "assets/en_baswa_dtg_layers_small_2-800x800.png";
-const BaswaSystem = ({ mainRef }) => {
+const BaswaSystem = ({ baswaSystemRef }) => {
   return (
-    <section ref={mainRef} className="baswa-system">
+    <section ref={baswaSystemRef} className="baswa-system">
       <div className="left">
         <div className="title">
           <h2>

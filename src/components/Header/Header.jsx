@@ -4,11 +4,11 @@ import "scss/components/Header/Header.scss";
 import { NavLink } from "react-router-dom";
 import Navbar from "components/Header/Navbar";
 
-const Header = ({ targetRef, setMenuOpen }) => {
-  const headerRef = useRef(null);
+const Header = ({ headerRef, setMenuOpen }) => {
+  // const headerRef = useRef(null);
 
   return (
-    <header ref={targetRef}>
+    <header ref={headerRef}>
       <div className="nav-area">
         <div className="logo" alt="logo">
           <NavLink to="/">

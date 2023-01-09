@@ -1,0 +1,47 @@
+:root {
+  --lightBeige: rgba(213,193,180,.1);
+  --darkBeige: rgba(213,193,180, 1);
+  --mediumBeige: rgba(213,193,180,.3);
+  --headerText: var(--vanilla);
+  --headerBg: var(--raspberry);
+
+
+  --galleryHeight : 38rem;
+
+
+}
+
+.upMotionClass {
+  //background: var(--vanilla);
+  //@include animation-mixin(upMotion, 50px, 0px);
+  animation: upMotion 3s ease-out 1;
+
+}
+.header-scroll-down {
+  background-color: transparent;
+  height: 8rem;
+}
+
+.header-scroll-up {
+  background-color: #fff;
+  height: 6rem;
+}
+
+@keyframes upMotion {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to  {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}
+
+
+.dark-beige-color {
+  color: var(--darkBeige)
+}
+
+

@@ -3,13 +3,13 @@ import "scss/components/MainContent/Main.scss";
 import HeroHome from "./HeroHome";
 import BaswaSystem from "./BaswaSystem";
 import BaswaGallery from "./BaswaGallery";
-const Main = ({ mainRef, baswaRef }) => {
+const Main = ({ mainRef, baswaGalleryRef, baswaSystemRef }) => {
   return (
     <main>
-      <HeroHome />
-      <BaswaSystem mainRef={mainRef} />
+      <HeroHome mainRef={mainRef} />
+      <BaswaSystem baswaSystemRef={baswaSystemRef} />
       {/*<article className="content" ref={mainRef}></article>*/}
-      <BaswaGallery />
+      <BaswaGallery baswaGalleryRef={baswaGalleryRef} />
       <section className="productFinder">
         <div className="HeroHome__slider"></div>
       </section>

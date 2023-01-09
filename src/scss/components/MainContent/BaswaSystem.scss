@@ -88,19 +88,22 @@
 }
 
 
-@keyframes upMotion {
-  from {
-    /* Add starting values for animation */
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to  {
-    /* Add Ending values for animation */
-    transform: translateY(0);
-    opacity: 1;
-  }
 
-}
+
+
+//@keyframes upMotion {
+//  from {
+//    /* Add starting values for animation */
+//    transform: translateY(50px);
+//    opacity: 0;
+//  }
+//  to  {
+//    /* Add Ending values for animation */
+//    transform: translateY(0);
+//    opacity: 1;
+//  }
+//
+//}
 @media screen and (max-width: 1280px) {
   .baswa-system {
 

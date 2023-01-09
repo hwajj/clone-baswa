@@ -1,11 +1,11 @@
-import React, { useRef, useState } from 'react';
-import 'scss/components/MainContent/HeroHome.scss';
-import { slideContentsData } from 'components/MainContent/slideContentsData';
-import SlideContent from './SlideContent';
-import Bullet from './Bullets';
-import 'scss/components/MainContent/HeroHome.scss';
+import React, { useRef, useState } from "react";
+import "scss/components/MainContent/HeroHome.scss";
+import { slideContentsData } from "components/MainContent/slideContentsData";
+import SlideContent from "./SlideContent";
+import Bullet from "./Bullets";
+import "scss/components/MainContent/HeroHome.scss";
 
-const HeroHome = () => {
+const HeroHome = ({ mainRef }) => {
   const [active, setActive] = useState(0);
   const bulletRef = useRef(null);
   const sliderContainerRef = useRef(null);
@@ -20,9 +20,9 @@ const HeroHome = () => {
   };
 
   return (
-    <section className='HeroHome'>
-      <div className='HeroHome-slider'>
-        <div className='slider-container' ref={sliderContainerRef}>
+    <section className="HeroHome" ref={mainRef}>
+      <div className="HeroHome-slider">
+        <div className="slider-container" ref={sliderContainerRef}>
           {slideContentsData.map((data, index) => (
             <SlideContent
               key={index}
@@ -35,7 +35,7 @@ const HeroHome = () => {
         </div>
       </div>
 
-      <div className='bullets'>
+      <div className="bullets">
         {slideContentsData.map((data, index) => {
           return (
             <Bullet
