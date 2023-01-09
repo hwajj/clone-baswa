@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Routes, Route } from "react-router-dom";
-import { useSelector } from "react-redux";
-import Main from "components/MainContent/Main";
-import Header from "components/Header/Header";
-import { sampleModalSelector } from "redux/reducer/modal";
-import Modal from "components/Modal/Modal";
-import main from "components/MainContent/Main";
+import React, { useState, useEffect, useRef } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import Main from 'components/MainContent/Main';
+import Header from 'components/Header/Header';
+import { sampleModalSelector } from 'redux/reducer/modal';
+import Modal from 'components/Modal/Modal';
+import main from 'components/MainContent/Main';
 
 function App() {
   const modalState = useSelector(sampleModalSelector);
@@ -21,21 +21,20 @@ function App() {
   const baswaSystemRef = useRef(null);
 
   useEffect(() => {
-    const headerHeight = headerRef.current.offsetHeight;
-    console.log(headerRef.current.offsetHeight);
+    // const headerHeight = headerRef.current.offsetHeight;
+
     const onScroll = () => {
       if (scrollY > 10) {
         // add class
-        console.log("하 " + scrollY);
-        headerRef.current.classList.add("header-scroll-up");
+
+        headerRef.current.classList.add('header-scroll-up');
       } else {
-        headerRef.current.classList.remove("header-scroll-up");
-        console.log("투 " + scrollY);
+        headerRef.current.classList.remove('header-scroll-up');
       }
     };
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener('scroll', onScroll);
     return () => {
-      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener('scroll', onScroll);
     };
   }, []);
 
@@ -47,31 +46,14 @@ function App() {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) {
             // console.log("not");
-            entry.target.classList.remove("upMotionClass");
+            entry.target.classList.remove('upMotionClass');
           } else {
             // console.log("intersecting");
-            entry.target.classList.add("upMotionClass");
+            entry.target.classList.add('upMotionClass');
             // mainRef.current.style.animation = "upMotion 3s ease-out 1";
-            //console.log();å
+            //console.log();
           }
         });
-
-        // const entry = entries[0];
-        // if (entry.isIntersecting) {
-        //   console.log("is intersecting");
-        //   headerRef.current.style.backgroundColor = "#fff";
-        //   headerRef.current.style.height = "6rem";
-        //   console.log(entry.intersectionRatio);
-        //   if (entry.intersectionRatio > 0.1) {
-        //     console.log("0.5");
-        //     mainRef.current.style.animation = "upMotion 3s ease-out 1";
-        //   }
-        // } else {
-        //   console.log("not intersecting");
-        //   headerRef.current.style.backgroundColor = "transparent";
-        //   headerRef.current.style.height = "8rem";
-        //   mainRef.current.style.animation = "none";
-        // }
       },
       {
         //      root: document.querySelector('#scrollArea'),
@@ -89,7 +71,7 @@ function App() {
 
   return (
     <div
-      className={`App ${modalState.isOpenModal ? "modal-height" : ""}`}
+      className={`App ${modalState.isOpenModal ? 'modal-height' : ''}`}
       ref={appRef}
     >
       <Header headerRef={headerRef} setMenuOpen={setMenuOpen} />
@@ -97,7 +79,7 @@ function App() {
       {menuToggle && <Menu />}
       <Routes>
         <Route
-          path="/*"
+          path='/*'
           element={
             <Main
               mainRef={mainRef}

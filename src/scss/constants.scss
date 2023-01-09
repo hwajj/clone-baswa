@@ -1,21 +1,15 @@
 :root {
-  --lightBeige: rgba(213,193,180,.1);
-  --darkBeige: rgba(213,193,180, 1);
-  --mediumBeige: rgba(213,193,180,.3);
+  --lightBeige: rgba(250, 242, 237, 0.992);
+  --darkBeige: rgba(213, 193, 180, 0.4);
+  --mediumBeige: rgba(213, 193, 180, 0.3);
   --headerText: var(--vanilla);
   --headerBg: var(--raspberry);
-
-
-  --galleryHeight : 38rem;
-
-
 }
 
 .upMotionClass {
   //background: var(--vanilla);
   //@include animation-mixin(upMotion, 50px, 0px);
-  animation: upMotion 3s ease-out 1;
-
+  animation: upMotion 0.5s ease-out 1;
 }
 .header-scroll-down {
   background-color: transparent;
@@ -32,16 +26,16 @@
     transform: translateY(50px);
     opacity: 0;
   }
-  to  {
+  to {
     transform: translateY(0);
     opacity: 1;
   }
-
 }
-
 
 .dark-beige-color {
-  color: var(--darkBeige)
+  color: var(--darkBeige);
 }
 
-
+.show {
+  display: block;
+}

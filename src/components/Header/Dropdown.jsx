@@ -1,14 +1,20 @@
-import React from "react";
-import "scss/components/Header/Dropdown.scss";
+import React from 'react';
+import {
+  DropdownSubmenuContainer,
+  DropdownSubmenuList,
+} from 'components/StyledComponent/DropdownSubmenu';
+import 'scss/components/Header/Dropdown.scss';
 const Dropdown = ({ submenus, dropdown }) => {
   return (
-    <ul className={`submenu-container ${dropdown ? "show" : ""}`}>
+    <DropdownSubmenuContainer
+      className={`submenu-container ${dropdown ? 'show' : ''}`}
+    >
       {submenus.map((submenu, index) => (
-        <li key={index} className="submenu-list">
+        <DropdownSubmenuList key={index} className='submenu-list'>
           <a href={submenu.url}>{submenu.title}</a>
-        </li>
+        </DropdownSubmenuList>
       ))}
-    </ul>
+    </DropdownSubmenuContainer>
   );
 };
 

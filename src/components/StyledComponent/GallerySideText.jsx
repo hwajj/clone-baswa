@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const GallerySideTextBackground = styled.div`
   background: var(--lightBeige);
@@ -7,11 +7,11 @@ const GallerySideTextBackground = styled.div`
   flex-direction: column;
   align-items: flex-start;
   font-size: 2.8rem;
-  order: ${(props) => props.order || 1};
+  order: ${(props) => props.order || 2};
 `;
 
 const GallerySideTextDesc = styled.div`
-  font-size: ${(props) => props.fontSize || "1.2rem"};
+  font-size: ${(props) => props.fontSize || '1.2rem'};
   line-height: 1.4;
   padding: 2rem 0;
   font-weight: 200;
@@ -21,7 +21,7 @@ const GallerySideTextSpan = styled.span`
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
-  font-size:  ${(props) => props.fontSize || "1.3rem"};
+  font-size:  ${(props) => props.fontSize || '1.3rem'};
   margin: 2rem 0;
   border-bottom: 1px solid var(--darkBeige);
   font-size: 50%;
@@ -29,7 +29,6 @@ const GallerySideTextSpan = styled.span`
 `;
 
 const GallerySideImageCont = styled.div`
-  //   border: 11px solid yellow;
   position: relative;
   display: flex;
   align-items: center;
@@ -40,8 +39,9 @@ const GallerySideImageCont = styled.div`
     width: 50%;
     height: 50%;
     object-fit: cover;
+    animation: upMotion 1.5s ease-out;
   }
-  order: ${(props) => props.order || 2};
+  order: ${(props) => props.order || 1};
 `;
 
 const GalleryMiddleWord = styled.div`

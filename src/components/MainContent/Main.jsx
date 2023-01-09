@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
-import "scss/components/MainContent/Main.scss";
-import HeroHome from "./HeroHome";
-import BaswaSystem from "./BaswaSystem";
-import BaswaGallery from "./BaswaGallery";
+import React, { useEffect } from 'react';
+import 'scss/components/MainContent/Main.scss';
+import HeroHome from './HeroHome';
+import BaswaSystem from './BaswaSystem';
+import BaswaGallery from './BaswaGallery';
 const Main = ({ mainRef, baswaGalleryRef, baswaSystemRef }) => {
   return (
     <main>
@@ -10,12 +10,12 @@ const Main = ({ mainRef, baswaGalleryRef, baswaSystemRef }) => {
       <BaswaSystem baswaSystemRef={baswaSystemRef} />
       {/*<article className="content" ref={mainRef}></article>*/}
       <BaswaGallery baswaGalleryRef={baswaGalleryRef} />
-      <section className="productFinder">
-        <div className="HeroHome__slider"></div>
+      <section className='productFinder'>
+        <div className='HeroHome__slider'></div>
       </section>
-      <article className="content"></article>
-      <section className="referenceSlider">
-        <div className="referenceSlider"></div>
+      <article className='content'></article>
+      <section className='referenceSlider'>
+        <div className='referenceSlider'></div>
       </section>
     </main>
   );
