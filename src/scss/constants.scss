@@ -1,6 +1,6 @@
 :root {
   --lightBeige: rgba(250, 242, 237, 0.992);
-  --darkBeige: rgba(213, 193, 180, 0.4);
+  --darkBeige: rgba(169, 119, 89, 0.4);
   --mediumBeige: rgba(213, 193, 180, 0.3);
   --headerText: var(--vanilla);
   --headerBg: var(--raspberry);
@@ -11,6 +11,7 @@
   //@include animation-mixin(upMotion, 50px, 0px);
   animation: upMotion 0.5s ease-out 1;
 }
+
 .header-scroll-down {
   background-color: transparent;
   height: 8rem;
@@ -32,10 +33,27 @@
   }
 }
 
+@keyframes rightMotion {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .dark-beige-color {
   color: var(--darkBeige);
 }
 
 .show {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
 }

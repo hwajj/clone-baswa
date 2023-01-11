@@ -1,0 +1,204 @@
+.references {
+  position: relative;
+
+  .references-frame {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 6rem);
+    transition-duration: 0ms;
+
+
+    & > .references-container {
+      display: flex;
+      //border: 1px solid cyan;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      & > .references-item {
+        // border: 1px solid greenyellow;
+        width: 100%;
+        display: grid;
+        flex-shrink: 0;
+        grid-template-columns: 1fr 2fr;
+        //animation: lightUp 2s ease-in;
+
+        & > .left {
+          padding: 2rem;
+          position: relative;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          font-size: 2rem;
+
+          & > .top {
+            height: 80%;
+            //
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+            position: relative;
+
+            & > .title {
+              height: 40%;
+              position: absolute;
+              top: 0;
+            }
+
+            & > .desc {
+              position: absolute;
+              bottom: 0;
+              height: 60%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              align-items: flex-start;
+              font-size: 2rem;
+
+              & > span:nth-child(1) {
+                padding: 1rem 0;
+                font-size: 40%;
+                font-weight: 100;
+              }
+
+            }
+
+          }
+
+
+        }
+
+
+        .right {
+          //  border: 3px solid red;
+          position: relative;
+          width: 100%;
+          height: 100%;
+
+          & > div {
+            position: absolute;
+            border: 2px solid blueviolet;
+          }
+
+          & > div:nth-child(1) {
+            width: 45%;
+            height: 65%;
+            top: 10%;
+            right: 0;
+            background-image: var(--backgroundUrl);
+
+            img {
+              width: 100%;
+              object-fit: cover;
+            }
+
+            //   animation: upMotion 1.5s ease-out;
+          }
+
+          & > div:nth-child(2) {
+            width: 30%;
+            height: 25%;
+            top: 46%;
+            left: 6%;
+            ///   animation: rightMotion 1.5s ease-out;
+
+          }
+        }
+
+      }
+    }
+  }
+
+
+  & > .pagination {
+    position: absolute;
+    width: 40%;
+    height: 13%;
+    bottom: 0;
+    left: 0;
+    border: 2px solid teal;
+    z-index: 200;
+    background: var(--darkBeige);
+    opacity: 1;
+
+
+    & > .number {
+      //  border: 2px solid black;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      font-size: 2rem;
+      color: #f6f3f2;
+
+      & > span:nth-child(1) {
+        width: 12%;
+        //    border: 1px solid black;
+        position: relative;
+        font-size: 2.8rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      // 01 - 3  가운데 작대기
+      & > span:nth-child(2) {
+        //border: 1px solid pink;
+        width: 6%;
+        padding: 10px;
+        border-right: 1px solid #f6f3f2;
+        transform: rotate(90deg) translateX(-50%);
+        position: relative;
+        margin: 2px;
+      }
+
+    }
+
+    & > .backforward {
+      //   border: 3px solid brown;
+      width: 30%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      gap: 30%;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #f6f3f2;
+
+    }
+  }
+}
+
+
+.notClickable {
+  pointer-events: none;
+  color: rgba(243, 240, 237);
+  cursor: none;
+  opacity: 0.4;
+}
+
+
+.clickable {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.opacityDown {
+  opacity: 0;
+}
+
+@keyframes lightUp {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

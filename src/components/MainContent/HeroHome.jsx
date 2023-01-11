@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import "scss/components/MainContent/HeroHome.scss";
 import { slideContentsData } from "components/MainContent/slideContentsData";
-import SlideContent from "./SlideContent";
-import Bullet from "./Bullets";
+import HeroHomeSlideContent from "./HeroHomeSlideContent";
+import Bullet from "./HeroHomeBullets";
 import "scss/components/MainContent/HeroHome.scss";
 
 const HeroHome = ({ mainRef }) => {
@@ -24,7 +24,7 @@ const HeroHome = ({ mainRef }) => {
       <div className="HeroHome-slider">
         <div className="slider-container" ref={sliderContainerRef}>
           {slideContentsData.map((data, index) => (
-            <SlideContent
+            <HeroHomeSlideContent
               key={index}
               slideRef={innerSliderRef}
               data={data}

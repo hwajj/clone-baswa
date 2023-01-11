@@ -1,14 +1,15 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState, useRef, useEffect } from "react";
+
+import { useDispatch } from "react-redux";
 import {
   DropdownSubmenuContainer,
   DropdownSubmenuList,
-} from 'components/StyledComponent/DropdownSubmenu';
+} from "components/StyledComponent/DropdownSubmenu";
 
-const BaswaGalleryIndex = ({ data, index }) => {
+const GalleryIndex = ({ data, index, baswaGalleryDtgRef }) => {
   const [dropdown, setDropdown] = useState(false);
 
-  const number = String(index + 1).padStart(2, '0');
+  const number = String(index + 1).padStart(2, "0");
 
   const dispatch = useDispatch();
 
@@ -26,38 +27,37 @@ const BaswaGalleryIndex = ({ data, index }) => {
         setDropdown(false);
       }
     };
-    document.addEventListener('mousedown', handler);
+    document.addEventListener("mousedown", handler);
     return () => {
       // Cleanup the event listener
-      document.removeEventListener('mousedown', handler);
+      document.removeEventListener("mousedown", handler);
     };
   }, [dropdown]);
 
-  const onMouseEnter = () => {
+  const onDropdown = () => {
     setDropdown((state) => !state);
     console.log(dropdown);
   };
 
   return (
-    <div className='menu-container' ref={listRef} onClick={onMouseEnter}>
-      <div className='menu'>
+    <div className="menu-container" ref={listRef} onClick={onDropdown}>
+      <div className="menu">
         <h2>{number}</h2>
         <h3>{data.title}</h3>
-        <span data-arrow={`${dropdown ? '\u2191' : '\u2193'}`}>
-          please select{' '}
+        <span data-arrow={`${dropdown ? "\u2191" : "\u2193"}`}>
+          please select{" "}
         </span>
       </div>
-      <DropdownSubmenuContainer
-        className={`submenu-container ${dropdown ? 'show' : ''}`}
-      >
+
+      <div className={`submenu-container ${dropdown ? "show" : "hide"}`}>
         {data.select.map((submenu, index) => (
           <DropdownSubmenuList key={index}>
             <a href={submenu.url}>{submenu}</a>
           </DropdownSubmenuList>
         ))}
-      </DropdownSubmenuContainer>
+      </div>
     </div>
   );
 };
 
-export default BaswaGalleryIndex;
+export default GalleryIndex;

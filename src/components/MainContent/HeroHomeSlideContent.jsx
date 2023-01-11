@@ -1,6 +1,6 @@
 import React from "react";
-import "scss/components/MainContent/SlideContent.scss";
-const SlideContent = ({ active, data, index, slideRef }) => {
+import "scss/components/MainContent/HeroHomeSlideContent.scss";
+const HeroHomeSlideContent = ({ active, data, index, slideRef }) => {
   return (
     <div
       ref={slideRef}
@@ -19,4 +19,4 @@ const SlideContent = ({ active, data, index, slideRef }) => {
   );
 };
 
-export default SlideContent;
+export default HeroHomeSlideContent;

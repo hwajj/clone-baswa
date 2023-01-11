@@ -1,17 +1,17 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const GallerySideTextBackground = styled.div`
   background: var(--lightBeige);
-  padding: 20% 10%;
+  padding: 20% 20% 10% 30%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 2.8rem;
+  font-size: 2rem;
   order: ${(props) => props.order || 2};
 `;
 
 const GallerySideTextDesc = styled.div`
-  font-size: ${(props) => props.fontSize || '1.2rem'};
+  font-size: ${(props) => props.fontSize || "50%"};
   line-height: 1.4;
   padding: 2rem 0;
   font-weight: 200;
@@ -21,7 +21,7 @@ const GallerySideTextSpan = styled.span`
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
-  font-size:  ${(props) => props.fontSize || '1.3rem'};
+  font-size:  ${(props) => props.fontSize || "1.3rem"};
   margin: 2rem 0;
   border-bottom: 1px solid var(--darkBeige);
   font-size: 50%;
