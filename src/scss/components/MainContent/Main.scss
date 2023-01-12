@@ -1,26 +1,11 @@
 main {
   position: relative;
   width: 100vw;
-  border: 3px solid black;
+  // border: 3px solid black;
 
   section {
     width: 100%;
     height: calc(100vh - 7rem);
     // border-bottom: 1px solid red;
   }
-
-  article {
-    // width: 100%;
-    // height: calc(100vh - 7rem);
-    // height: 20rem;
-    border-bottom: 1px solid blue;
-  }
 }
-
-.content {
-}
-
-.baswa-system {
-  border: 1px solid pink;
-}
-

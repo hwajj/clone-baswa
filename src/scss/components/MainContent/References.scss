@@ -15,7 +15,6 @@
       width: 100%;
       height: 100%;
 
-
       & > .references-item {
         width: 100%;
         display: grid;
@@ -33,12 +32,14 @@
 
           & > .top {
             height: 80%;
-            //
+            top: 0;
+
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             align-items: flex-start;
-            position: relative;
+            position: absolute;
 
             & > .title {
               height: 40%;
@@ -49,7 +50,7 @@
             & > .desc {
               position: absolute;
               bottom: 0;
-              height: 60%;
+              height: 50%;
               display: flex;
               flex-direction: column;
               justify-content: space-around;
@@ -61,14 +62,9 @@
                 font-size: 40%;
                 font-weight: 100;
               }
-
             }
-
           }
-
-
         }
-
 
         .right {
           //  border: 3px solid red;
@@ -91,8 +87,6 @@
             top: 10%;
             right: 2%;
             //background-image: var(--backgroundUrl);
-
-
             //   animation: upMotion 1.5s ease-out;
           }
 
@@ -102,14 +96,11 @@
             top: 46%;
             left: 6%;
             ///   animation: rightMotion 1.5s ease-out;
-
           }
         }
-
       }
     }
   }
-
 
   & > .pagination {
     position: absolute;
@@ -117,11 +108,10 @@
     height: 13%;
     bottom: 0;
     left: 0;
-    border: 2px solid teal;
+    //  border: 2px solid teal;
     z-index: 1;
     background: var(--darkBeige);
     opacity: 1;
-
 
     & > .number {
       //  border: 2px solid black;
@@ -154,7 +144,6 @@
         position: relative;
         margin: 2px;
       }
-
     }
 
     & > .backforward {
@@ -170,11 +159,9 @@
       justify-content: center;
       font-size: 2rem;
       color: #f6f3f2;
-
     }
   }
 }
-
 
 .notClickable {
   pointer-events: none;
@@ -182,7 +169,6 @@
   cursor: none;
   opacity: 0.4;
 }
-
 
 .clickable {
   pointer-events: all;

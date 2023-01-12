@@ -6,7 +6,6 @@ const DropdownSubmenuContainer = styled.div`
   top: 90%;
   width: 267%;
   display: ${(props) => props.show};
-  border: 1px solid yellow;
   box-shadow: 3px 1px 25px -3px rgba(61, 61, 61, 0.75);
 `;
 

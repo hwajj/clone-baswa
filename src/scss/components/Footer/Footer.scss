@@ -1,3 +1,76 @@
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1rem;
+  background-color: rgba(245, 239, 239, 0.4);
 
+  .logo {
+    padding: 2.5rem 0 1rem;
+    transform: translate(13%);
+    img {
+      width: 120px;
+    }
+  }
+
+  .message {
+    padding: 0.6rem 0 0.4rem;
+    font-weight: 100;
+  }
+
+  .contact {
+    font-weight: bolder;
+    font-size: 100%;
+  }
+
+  .sns {
+    padding: 2rem 0;
+    //border: 1px solid red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    & > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      // border: 1px solid black;
+      svg {
+        width: 0.8rem;
+        height: 0.8rem;
+      }
+    }
+  }
+
+  .sampleBtn {
+    //  border: 1px solid black;
+    height: 3.5rem;
+    width: 100%;
+    background-color: black;
+    bottom: 0;
+    margin: 1rem;
+    color: var(--lightBeige);
+    font-size: 0.9rem;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 4rem;
+  }
+
+  .bottom {
+    width: 100%;
+    height: 4rem;
+    border-top: 0.7px solid var(--darkBeige);
+    font-size: 0.8rem;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
 }
