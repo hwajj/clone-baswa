@@ -4,7 +4,8 @@ import HeroHome from "components/MainContent/HeroHome";
 import System from "components/MainContent/System";
 import Gallery from "components/MainContent/Gallery";
 import References from "./References";
-import { referencesData } from "components/MainContent/referencesData";
+import Pioneers from "./Pioneers";
+
 const Main = ({ mainRef, galleryIndexRef, systemRef, allRefs }) => {
   // console.log(referencesData);
 
@@ -15,14 +16,7 @@ const Main = ({ mainRef, galleryIndexRef, systemRef, allRefs }) => {
       {/*<article className="content" ref={mainRef}></article>*/}
       <Gallery galleryIndexRef={galleryIndexRef} allRefs={allRefs} />
       <References />
-
-      <section className="productFinder">
-        <div className="HeroHome__slider"></div>
-      </section>
-
-      <section className="referenceSlider">
-        <div className="referenceSlider"></div>
-      </section>
+      <Pioneers />
     </main>
   );
 };

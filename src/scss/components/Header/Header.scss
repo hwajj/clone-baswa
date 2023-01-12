@@ -4,8 +4,8 @@ header {
   display: flex;
   top: 0;
   //background: #fff;
-  transition: background-color 0.3s cubic-bezier(.4,0,.2,1), height 0.3s cubic-bezier(.4,0,.2,1);
- // border: 1px solid black;
+  transition: background-color 0.3s cubic-bezier(.4, 0, .2, 1), height 0.3s cubic-bezier(.4, 0, .2, 1);
+  // border: 1px solid black;
   height: 8rem;
   pointer-events: all;
   z-index: 2;
@@ -19,9 +19,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .logo {
       width: 10rem;
       flex-shrink: 0;
+
+      img {
+        width: 100%;
+      }
     }
   }
 }

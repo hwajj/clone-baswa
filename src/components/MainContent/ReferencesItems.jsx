@@ -4,9 +4,20 @@ import {
   GallerySideTextDesc,
   GallerySideTextSpan,
 } from "../StyledComponent/GallerySideText";
+import pic_1_1 from "assets/references_1_1.jpeg";
+import pic_1_2 from "assets/references_1_2.jpeg";
+import pic_2_1 from "assets/references_2_1.jpeg";
+import pic_2_2 from "assets/references_2_2.jpeg";
+import pic_3_1 from "assets/references_3_1.jpeg";
+import pic_3_2 from "assets/references_3_2.jpeg";
 
 const ReferencesItem = ({ data, index, currentIdx, containerRef }) => {
   console.log(currentIdx, index);
+  const picArr = [
+    [pic_1_1, pic_1_2],
+    [pic_2_1, pic_2_2],
+    [pic_3_1, pic_3_2],
+  ];
   const referenceItemRef = useRef(null);
   const referenceLeftImageRef = useRef(null);
   const referenceRightImageRef = useRef(null);
@@ -17,10 +28,6 @@ const ReferencesItem = ({ data, index, currentIdx, containerRef }) => {
     referenceLeftImageRef.current.style.animation = "none";
     referenceRightImageRef.current.style.animation = "none";
 
-    referenceLeftImageRef.current.style.setProperty(
-      "--backgroundUrl",
-      "url('/assets/references_1_1.jpeg')"
-    );
     setTimeout(() => {
       referenceItemRef.current.style.animation = "lightUp .5s ease-in";
       referenceLeftImageRef.current.style.animation = "upMotion .8s ease-out";
@@ -56,9 +63,11 @@ const ReferencesItem = ({ data, index, currentIdx, containerRef }) => {
 
       <div className="right">
         <div ref={referenceLeftImageRef}>
-          <img src={`src/assets/references_1_1.jpeg`} alt="" />
+          <img src={picArr[currentIdx][0]} alt={`${data.title} image 1`} />
         </div>
-        <div ref={referenceRightImageRef}></div>
+        <div ref={referenceRightImageRef}>
+          <img src={picArr[currentIdx][1]} alt={`${data.title} image 2`} />
+        </div>
       </div>
     </div>
   );

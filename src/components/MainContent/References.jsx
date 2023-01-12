@@ -16,8 +16,8 @@ const References = () => {
 
   return (
     <div className="references">
-      <section className="references-frame" ref={slideContainerRef}>
-        <div className="references-container">
+      <section className="references-frame">
+        <div className="references-container" ref={slideContainerRef}>
           {referencesData.map((data, index) => (
             <ReferencesItem
               data={data}

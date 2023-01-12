@@ -5,7 +5,7 @@ import Main from "components/MainContent/Main";
 import Header from "components/Header/Header";
 import { sampleModalSelector } from "redux/reducer/modal";
 import Modal from "components/Modal/Modal";
-import main from "components/MainContent/Main";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const modalState = useSelector(sampleModalSelector);
@@ -93,12 +93,15 @@ function App() {
         <Route
           path="/*"
           element={
-            <Main
-              mainRef={mainRef}
-              systemRef={systemRef}
-              galleryIndexRef={galleryIndexRef}
-              allRefs={allRefs}
-            />
+            <>
+              <Main
+                mainRef={mainRef}
+                systemRef={systemRef}
+                galleryIndexRef={galleryIndexRef}
+                allRefs={allRefs}
+              />
+              <Footer />
+            </>
           }
         ></Route>
       </Routes>

@@ -4,6 +4,9 @@
 
 html, body {
   width: 100%;
+
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 #root {
@@ -13,7 +16,7 @@ html, body {
 #root::before {
   content: '';
   background: url("../assets/soundwave-1.svg");
-  transition: opacity .3s cubic-bezier(.4,0,.2,1);
+  transition: opacity .3s cubic-bezier(.4, 0, .2, 1);
   position: absolute;
   top: -94px;
   left: -82px;

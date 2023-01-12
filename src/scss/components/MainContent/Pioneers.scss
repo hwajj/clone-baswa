@@ -1,0 +1,44 @@
+.pioneers {
+  border: 2px solid red;
+  padding: 4rem;
+  height: auto;
+  margin: 8rem 0;
+
+  & > .title {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 2.4rem;
+    padding: 0 0 1rem;
+    //  border: 1px solid red;
+
+    & > h2 {
+      font-size: 100%;
+      line-height: 1.1;
+    }
+
+    & > h6 {
+      padding: 2rem 0;
+      width: 40%;
+      font-size: 50%;
+      line-height: 1.4;
+    }
+  }
+
+  & > .article {
+    // border: 1px solid palevioletred;
+    height: 50%;
+    font-weight: 100;
+    letter-spacing: 0.1px;
+    line-height: 1.5;
+    column-count: 2;
+
+    p {
+      padding: 1rem 0;
+      font-size: 130%;
+      font-weight: bold;
+    }
+  }
+}
