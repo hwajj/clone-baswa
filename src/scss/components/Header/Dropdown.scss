@@ -1,6 +1,6 @@
 .submenu-container {
   //display: none;
-  border: 1px solid cadetblue;
+  // border: 1px solid cadetblue;
   z-index: 1000;
   position: absolute;
   top: 90%;
@@ -21,6 +21,7 @@
       height: 100%;
       transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
     & > a:hover {
       background-color: #f1e4dc;
     }

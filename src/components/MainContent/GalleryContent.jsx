@@ -13,7 +13,7 @@ const GalleryContent = ({ odd, data, allRefs }) => {
   console.log(data);
   return (
     <article className="gallery" ref={(ref) => (allRefs[data.title] = ref)}>
-      <GallerySideTextBackground order={odd + 1}>
+      <GallerySideTextBackground order={odd + 1} className="gallery-side-text">
         <div>
           <h2>
             {"BASWA "}
@@ -21,7 +21,7 @@ const GalleryContent = ({ odd, data, allRefs }) => {
             <span className="dark-beige-color">{data.title}</span>
           </h2>
         </div>
-        <GallerySideTextDesc>
+        <GallerySideTextDesc className="side-text-desc">
           {data.desc}
           {/* Suitable for all building types, BASWA is engineered for versatility,
           performance, appearance and long term durability. Design for acoustic
@@ -31,10 +31,10 @@ const GalleryContent = ({ odd, data, allRefs }) => {
           BASWA {data.title}
         </GallerySideTextSpan>
       </GallerySideTextBackground>
-      <GallerySideImageCont>
-        <img src={primeTopImg} alt="baswa primetop image" />
+      <GallerySideImageCont className="gallery-side-img">
+        <img src={data.imgSrc} alt="baswa primetop image" />
       </GallerySideImageCont>
-      <GalleryMiddleWord>SYSTEM</GalleryMiddleWord>
+      <GalleryMiddleWord className="system">SYSTEM</GalleryMiddleWord>
     </article>
   );
 };
