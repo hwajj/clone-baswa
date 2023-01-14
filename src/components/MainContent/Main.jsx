@@ -5,6 +5,7 @@ import System from "components/MainContent/System";
 import Gallery from "components/MainContent/Gallery";
 import References from "./References";
 import Pioneers from "./Pioneers";
+import Blog from "./Blog";
 
 const Main = ({ mainRef, galleryIndexRef, systemRef, allRefs }) => {
   // console.log(referencesData);
@@ -16,6 +17,7 @@ const Main = ({ mainRef, galleryIndexRef, systemRef, allRefs }) => {
       {/*<article className="content" ref={mainRef}></article>*/}
       <Gallery galleryIndexRef={galleryIndexRef} allRefs={allRefs} />
       <References />
+      <Blog />
       <Pioneers />
     </main>
   );
