@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
-import "scss/components/MainContent/HeroHome.scss";
-import { slideContentsData } from "components/MainContent/slideContentsData";
-import HeroHomeSlideContent from "./HeroHomeSlideContent";
-import Bullet from "./HeroHomeBullets";
-import "scss/components/MainContent/HeroHome.scss";
+import "@/scss/components/MainContent/HeroHome.scss";
+import { slideContentsData } from "@/components/MainContent/slideContentsData";
+import HeroHomeSlideContent from "@/components/MainContent/HeroHomeSlideContent";
+import Bullet from "@/components/MainContent/HeroHomeBullets";
+import "@/scss/components/MainContent/HeroHome.scss";
 
 const HeroHome = ({ mainRef }) => {
   const [active, setActive] = useState(0);

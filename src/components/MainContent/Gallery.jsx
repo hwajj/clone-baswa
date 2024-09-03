@@ -1,6 +1,7 @@
-import React, { useRef, useState } from "react";
-import "scss/components/MainContent/Gallery.scss";
-import GalleryContent from "./GalleryContent";
+import React, { useRef } from "react";
+import "@/scss/components/MainContent/Gallery.scss";
+import GalleryContent from "@/components/MainContent/GalleryContent";
+
 import {
   gallerySideContentData,
   galleryChoiceData,

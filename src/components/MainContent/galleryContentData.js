@@ -1,6 +1,6 @@
-import img01 from "assets/gallery_01.png";
-import img02 from "assets/gallery_02.jpeg";
-import img03 from "assets/gallery_03.jpeg";
+import img01 from "@/assets/gallery_01.png";
+import img02 from "@/assets/gallery_02.jpeg";
+import img03 from "@/assets/gallery_03.jpeg";
 
 const gallerySideContentData = [
   {

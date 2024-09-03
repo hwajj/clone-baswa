@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import "scss/components/MainContent/Main.scss";
-import HeroHome from "components/MainContent/HeroHome";
-import System from "components/MainContent/System";
-import Gallery from "components/MainContent/Gallery";
+import "@/scss/components/MainContent/Main.scss";
+import HeroHome from "@/components/MainContent/HeroHome";
+import System from "@/components/MainContent/System";
+import Gallery from "@/components/MainContent/Gallery";
 import References from "./References";
 import Pioneers from "./Pioneers";
 import Blog from "./Blog";

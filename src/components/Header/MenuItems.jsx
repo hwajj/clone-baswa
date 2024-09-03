@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
-import { HEADER_MENU_TYPE } from "utils/constant";
-import Dropdown from "components/Header/Dropdown";
-
-import "scss/components/Header/MenuItems.scss";
-import { AiFillCaretDown } from "react-icons/ai";
-import { openModalAction } from "redux/reducer/modal";
 import { useDispatch } from "react-redux";
+import { AiFillCaretDown } from "react-icons/ai";
+import Dropdown from "@/components/Header/Dropdown";
+import { HEADER_MENU_TYPE } from "@/utils/constant";
+import "@/scss/components/Header/MenuItems.scss";
+import { openModalAction } from "@/redux/reducer/modal";
+
 const MenuItems = ({ items }) => {
   const dispatch = useDispatch();
   const [dropdown, setDropdown] = useState(false);

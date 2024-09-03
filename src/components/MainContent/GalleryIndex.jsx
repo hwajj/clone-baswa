@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import {
   DropdownSubmenuContainer,
   DropdownSubmenuList,
-} from "components/StyledComponent/DropdownSubmenu";
+} from "@/components/StyledComponent/DropdownSubmenu";
 
 const GalleryIndex = ({ data, index, baswaGalleryDtgRef }) => {
   const [dropdown, setDropdown] = useState(false);

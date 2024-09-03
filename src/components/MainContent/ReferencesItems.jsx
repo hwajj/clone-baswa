@@ -1,15 +1,15 @@
 import React, { useEffect, useRef } from "react";
-import "scss/components/MainContent/References.scss";
+import "@/scss/components/MainContent/References.scss";
 import {
   GallerySideTextDesc,
   GallerySideTextSpan,
-} from "../StyledComponent/GallerySideText";
-import pic_1_1 from "assets/references_1_1.jpeg";
-import pic_1_2 from "assets/references_1_2.jpeg";
-import pic_2_1 from "assets/references_2_1.jpeg";
-import pic_2_2 from "assets/references_2_2.jpeg";
-import pic_3_1 from "assets/references_3_1.jpeg";
-import pic_3_2 from "assets/references_3_2.jpeg";
+} from "@/components/StyledComponent/GallerySideText";
+import pic_1_1 from "@/assets/references_1_1.jpeg";
+import pic_1_2 from "@/assets/references_1_2.jpeg";
+import pic_2_1 from "@/assets/references_2_1.jpeg";
+import pic_2_2 from "@/assets/references_2_2.jpeg";
+import pic_3_1 from "@/assets/references_3_1.jpeg";
+import pic_3_2 from "@/assets/references_3_2.jpeg";
 
 const ReferencesItem = ({ data, index, currentIdx, containerRef }) => {
   console.log(currentIdx, index);

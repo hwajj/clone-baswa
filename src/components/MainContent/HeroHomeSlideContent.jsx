@@ -1,5 +1,5 @@
 import React from "react";
-import "scss/components/MainContent/HeroHomeSlideContent.scss";
+import "@/scss/components/MainContent/HeroHomeSlideContent.scss";
 const HeroHomeSlideContent = ({ active, data, index, slideRef }) => {
   return (
     <div

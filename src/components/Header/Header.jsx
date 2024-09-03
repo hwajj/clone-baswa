@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
-import logoSvg from "assets/logo.svg";
-import "scss/components/Header/Header.scss";
+import React from "react";
+import logoSvg from "@/assets/logo.svg";
+import "@/scss/components/Header/Header.scss";
 import { NavLink } from "react-router-dom";
-import Navbar from "components/Header/Navbar";
+import Navbar from "@/components/Header/Navbar";
 
 const Header = ({ headerRef, setMenuOpen }) => {
   // const headerRef = useRef(null);

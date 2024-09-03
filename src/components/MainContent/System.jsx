@@ -1,6 +1,6 @@
 import React from "react";
-import "scss/components/MainContent/System.scss";
-import layerImg from "assets/en_baswa_dtg_layers_small_2-800x800.png";
+import "@/scss/components/MainContent/System.scss";
+import layerImg from "@/assets/en_baswa_dtg_layers_small_2-800x800.png";
 const System = ({ systemRef }) => {
   return (
     <section ref={systemRef} className="baswa-system">

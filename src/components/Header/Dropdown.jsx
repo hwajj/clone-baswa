@@ -2,8 +2,8 @@ import React from "react";
 import {
   DropdownSubmenuContainer,
   DropdownSubmenuList,
-} from "components/StyledComponent/DropdownSubmenu";
-// import 'scss/components/Header/Dropdown.scss';
+} from "@/components/StyledComponent/DropdownSubmenu";
+// import '@/scss/components/Header/Dropdown.scss';
 const Dropdown = ({ submenus, dropdown }) => {
   console.log(dropdown);
   return (

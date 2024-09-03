@@ -1,4 +1,4 @@
-import { HEADER_MENU_TYPE } from '../../utils/constant';
+import { HEADER_MENU_TYPE } from '@/utils/constant';
 
 const menuItemInfo = [
   {

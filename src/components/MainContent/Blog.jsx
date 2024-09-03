@@ -1,7 +1,7 @@
 import React from "react";
-import "scss/components/MainContent/Blog.scss";
-import img01 from "assets/blog_01.jpeg";
-import img02 from "assets/blog_02.jpeg";
+import "@/scss/components/MainContent/Blog.scss";
+import img01 from "@/assets/blog_01.jpeg";
+import img02 from "@/assets/blog_02.jpeg";
 
 const Blog = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
-import "scss/components/MainContent/References.scss";
-import { referencesData } from "./referencesData";
-import ReferencesItem from "./ReferencesItems";
+import "@/scss/components/MainContent/References.scss";
+import { referencesData } from "@/components/MainContent/referencesData";
+import ReferencesItem from "@/components/MainContent/ReferencesItems";
 
 const References = () => {
   const [currentPage, setCurrentPage] = useState(0);

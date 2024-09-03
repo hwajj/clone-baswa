@@ -1,10 +1,10 @@
-import React from "react";
-import "../../scss/components/Modal/Modal.scss";
-import { inputInfo } from "./inputInfo";
-import ModalInfo from "./Modal.Info";
-import { HEADER_MENU_TYPE } from "../../utils/constant";
-import { closeModalAction } from "../../redux/reducer/modal";
 import { useDispatch } from "react-redux";
+import React from "react";
+import "@/scss/components/Modal/Modal.scss";
+import { inputInfo } from "@/components/Modal/inputInfo.js";
+import ModalInfo from "@/components/Modal/Modal.Info";
+import { HEADER_MENU_TYPE } from "@/utils/constant";
+import { closeModalAction } from "@/redux/reducer/modal";
 const Modal = () => {
   const dispatch = useDispatch();
   const onClose = () => {

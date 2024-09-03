@@ -1,9 +1,9 @@
 import React from "react";
-import "scss/components/MainContent/Pioneers.scss";
+import "@/scss/components/MainContent/Pioneers.scss";
 import {
   GallerySideTextDesc,
   GallerySideTextSpan,
-} from "../StyledComponent/GallerySideText";
+} from "@/components/StyledComponent/GallerySideText";
 
 const Pioneers = () => {
   return (

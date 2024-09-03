@@ -5,7 +5,7 @@ import {
   GallerySideTextBackground,
   GallerySideTextDesc,
   GallerySideTextSpan,
-} from "../StyledComponent/GallerySideText";
+} from "@/components/StyledComponent/GallerySideText";
 
 import primeTopImg from "../../assets/en_baswa_dtg_primetop_2-768x576.png";
 
