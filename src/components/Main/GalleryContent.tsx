@@ -24,7 +24,6 @@ export default function GalleryContent({
   data,
   allRefs,
 }: GalleryContentProps) {
-  console.log(data);
   return (
     <article
       className="gallery"

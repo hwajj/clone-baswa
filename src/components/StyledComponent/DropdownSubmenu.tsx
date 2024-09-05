@@ -4,7 +4,7 @@ const DropdownSubmenuContainer = styled.div`
   z-index: 1000;
   position: absolute;
   top: 90%;
-  width: 267%;
+  //width: 100%;
   display: ${({ show }: { show: string }) => show};
   box-shadow: 3px 1px 25px -3px rgba(61, 61, 61, 0.75);
 `;
@@ -16,8 +16,6 @@ const DropdownSubmenuList = styled.div`
   width: 100%;
 
   & > a {
-    width: 100%;
-    display: block;
     padding: 0.7rem;
     height: 100%;
     transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);

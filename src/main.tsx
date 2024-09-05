@@ -4,7 +4,10 @@ import { BrowserRouter } from "react-router-dom";
 import "./scss/index.scss";
 import App from "./App";
 import { StoreProvider } from "@/redux/StoreProvider";
+import "@/index.css";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
     <StoreProvider>

@@ -1,34 +1,3 @@
 @import 'src/scss/reset.scss';
 @import 'src/scss/fonts.scss';
 @import 'src/scss/constants.scss';
-
-html, body {
-  width: 100%;
-
-  overflow-x: clip;
-  overflow-y: visible;
-}
-
-#root {
-  width: 100%;
-}
-
-#root::before {
-  content: '';
-  background: url("../assets/soundwave-1.svg");
-  transition: opacity .3s cubic-bezier(.4, 0, .2, 1);
-  position: absolute;
-  top: -94px;
-  left: -82px;
-  display: block;
-  width: 308px;
-  height: 360px;
-  pointer-events: none;
-  background-size: 100% auto;
-  opacity: .2;
-}
-
-.modal-height {
-  max-height: 102rem;
-  overflow: hidden;
-}

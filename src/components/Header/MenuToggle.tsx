@@ -6,7 +6,7 @@ export default function MenuToggle() {
 
   const setMenuOpen = () => {
     setMenuToggle((menuToggle) => !menuToggle);
-    console.log(menuToggle);
+    // console.log(menuToggle);
   };
 
   return (

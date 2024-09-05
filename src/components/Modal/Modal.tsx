@@ -14,7 +14,7 @@ export default function Modal() {
   return (
     <div>
       <div className="modal-page">
-        <div className="close" onClick={onClose}></div>
+        <div className="close cursor-pointer" onClick={onClose}></div>
         <div className="title-container">
           <h3 className="title">Musterbestellung</h3>
         </div>
@@ -36,7 +36,7 @@ export default function Modal() {
           </div>
           <div className="policy-captcha">
             <input type="checkbox" />
-            <span> 로봇이 아님다</span>
+            <span> I am human </span>
           </div>
         </div>
         <div className="button-container">

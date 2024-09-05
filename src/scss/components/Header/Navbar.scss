@@ -1,60 +1,71 @@
 
 .nav-wrapper {
-  //border: 1px solid black;
-  display: flex;
-  font-size: 0.875rem;
-  font-family: 'FlamaBook', sans-serif;
-  width: 100%;
-  justify-content: flex-end;
-  align-items: center;
-  position: relative;
-  height: 100%;
-  width: 100%;
-
-
+  ////border: 1px solid black;
+  //display: flex;
+  //font-size: 0.875rem;
+  //font-family: 'FlamaBook', sans-serif;
+  //width: 100%;
+  //justify-content: flex-end;
+  //align-items: center;
+  //position: relative;
+  //height: 100%;
+  //width: 100%;
+  //
+  //
 
   & > .menus {
-    display: flex;
-    padding-right: 1rem;
-    position: relative;
-    align-items: center;
-    justify-content: flex-end;
-    height: 100%;
-    width: 100%;
-  //  gap : 1.2rem;
-    //border:1px solid red;
-
+    //display: flex;
+    //padding-right: 1rem;
+    //align-items: center;
+    //justify-content: flex-end;
+    //height: 100%;
 
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .nav-wrapper {
-    .menus {
-      display: none;
-    }
-
-    .hamburger {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      right: 0;
-    //  border: 1px solid black;
-      width: 30px;
-      height: 30px;
-      cursor: pointer;
-      & > span {
-        width: 26px;
-        height: 2px;
-        background: black;
-        margin: 3px;
-
-      }
-      & > span:nth-of-type(2) {
-        width: 24px;
-      }
-    }
-  }
-
-}
+//@media screen and (max-width: 1024px) {
+//  .nav-wrapper {
+//    .menus {
+//      //display: none;
+//    }
+//
+//    .hamburger {
+//      display: flex;
+//      flex-direction: column;
+//      align-items: center;
+//      justify-content: center;
+//      right: 0;
+//    //  border: 1px solid black;
+//      width: 30px;
+//      height: 30px;
+//      cursor: pointer;
+//      & > span {
+//        width: 26px;
+//        height: 2px;
+//        background: black;
+//        margin: 3px;
+//
+//      }
+//      & > span:nth-of-type(2) {
+//        width: 24px;
+//      }
+//    }
+//    .menus.open {
+//      border: 1px solid red;
+//      display: flex;
+//      flex-direction: column;
+//      position: fixed;
+//      top: 0;
+//      left: 0;
+//      width: 100vw;
+//      height: 100vh;
+//      background: rgba(0, 0, 0, 0.9);
+//      color: white;
+//      align-items: center;
+//      justify-content: center;
+//      gap: 2rem;
+//      z-index: 100;
+//    }
+//  }
+//
+//}
