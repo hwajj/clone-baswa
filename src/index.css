@@ -34,9 +34,12 @@
 
 html, body {
   width: 100%;
-  
   overflow-x: clip;
   overflow-y: visible;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
 #root {
@@ -45,7 +48,7 @@ html, body {
 
 
 .logo {
-  background: url("src/assets/logo.svg");
+  background: url("./assets/logo.svg");
   background-repeat: no-repeat;
   background-position: center;
   transition: opacity .3s cubic-bezier(.4, 0, .2, 1);
@@ -63,7 +66,7 @@ html, body {
 
 #root::before {
   content: '';
-  background: url("src/assets/soundwave-1.svg");
+  background: url("./assets/soundwave-1.svg");
   transition: all .3s cubic-bezier(.4,0,.2,1);
   position: absolute;
   top: -94px;
@@ -78,20 +81,20 @@ html, body {
 
 
 @media  screen and (max-width: 1024px)  {
-.navbar-sm::before {
-  content: '';
-  background: url("src/assets/soundwave-1.svg");
-  transition: all .3s cubic-bezier(.4, 0, .2, 1);
-  position: absolute;
-  top: -94px;
-  left: -82px;
-  display: block;
-  width: 308px;
-  height: 360px;
-  pointer-events: none;
-  background-size: 100% auto;
-  opacity: .2;
-}
+  .navbar-sm::before {
+    content: '';
+    background: url("/assets/soundwave-1.svg");
+    transition: all .3s cubic-bezier(.4, 0, .2, 1);
+    position: absolute;
+    top: -94px;
+    left: -82px;
+    display: block;
+    width: 308px;
+    height: 360px;
+    pointer-events: none;
+    background-size: 100% auto;
+    opacity: .2;
+  }
 
 }
 
@@ -107,23 +110,23 @@ html, body {
 @font-face {
   font-family: 'FlamaBook';
   font-weight: 900;
-  src: url('src/assets/fonts/Flama-Bold.otf') format('otf');
+  src: url('./assets/fonts/Flama-Bold.otf') format('otf');
 }
 
 @font-face {
   font-family: 'FlamaBook';
   font-weight: 400;
-  src: url('src/assets/fonts/FlamaBook Regular.otf') format('otf');
+  src: url('./assets/fonts/FlamaBook Regular.otf') format('otf');
 }
 
 @font-face {
   font-family: 'FlamaBook';
   font-weight: 300;
-  src: url('src/assets/fonts/FlamaBook Regular.otf') format('otf');
+  src: url('./assets/fonts/FlamaBook Regular.otf') format('otf');
 }
 
 @font-face {
   font-family: 'FlamaBook';
   font-weight: 200;
-  src: url('src/assets/fonts/Flama-Light.woff') format('woff');
+  src: url('./assets/fonts/Flama-Light.woff') format('woff');
 }

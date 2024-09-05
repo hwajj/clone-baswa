@@ -10,12 +10,10 @@ export const sampleModalSlice = createSlice({
   name: "sampleModal",
   initialState,
   reducers: {
-    openModalAction: (state, { payload }) => {
-      console.log(payload);
+    openModalAction: (state) => {
       return { ...state, isOpenModal: true };
     },
-    closeModalAction: (state, { payload }) => {
-      // return { ...state, isOpenModal: false, ranking: {} };
+    closeModalAction: (state) => {
       return { ...state, isOpenModal: false };
     },
   },

@@ -13,7 +13,7 @@ const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleNav = () => {
-    console.log("toggleNav");
+    // console.log("toggleNav");
     setIsNavOpen(!isNavOpen); // 햄버거 버튼을 누르면 상태를 변경
   };
   const [dropdown, setDropdown] = useState(false);
@@ -71,9 +71,9 @@ const Navbar = () => {
           ></span>
         </div>
       </div>
-      {/*lg 일때 메뉴*/}
+      {/* 1024px 이상일때 Navbar */}
       <div
-        className={`${isNavOpen ? "opacity-100" : "opacity-0"} flex items-center justify-center flex-col  navbar-sm transition-opacity duration-300 absolute w-screen bg-white top-0 left-0 py-[1rem] px-[3rem] h-screen z-30`}
+        className={`${isNavOpen ? "flex" : "hidden"} lg:hidden items-center justify-center flex-col  navbar-sm transition-opacity duration-300 absolute w-screen bg-white top-0 left-0 py-[1rem] px-[3rem] h-screen z-30`}
       >
         <MobileNavbar />
       </div>

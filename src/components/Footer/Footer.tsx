@@ -20,7 +20,7 @@ export default function Footer() {
 
   return (
     <footer>
-      <div className="logo">
+      <div className="">
         <img src={logoSvg} />
       </div>
       <div className="message">

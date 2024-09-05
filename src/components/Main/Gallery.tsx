@@ -16,7 +16,7 @@ export default function Gallery({ galleryIndexRef, allRefs }: GalleryProps) {
   const indexRef = useRef<HTMLDivElement>(null);
 
   const onShowToggleMenu = (event: React.MouseEvent) => {
-    console.log(event.target);
+    // console.log(event.target);
   };
 
   return (

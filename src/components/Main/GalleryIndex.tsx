@@ -32,8 +32,8 @@ export default function GalleryIndex({
         listRef.current &&
         !listRef.current.contains(event.target)
       ) {
-        console.log(listRef.current);
-        console.log(event.target);
+        // console.log(listRef.current);
+        // console.log(event.target);
         setDropdown(false);
       }
     };
@@ -46,7 +46,7 @@ export default function GalleryIndex({
 
   const onDropdown = () => {
     setDropdown((state) => !state);
-    console.log(dropdown);
+    // console.log(dropdown);
   };
 
   return (

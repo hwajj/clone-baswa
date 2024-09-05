@@ -11,9 +11,7 @@ import System from "@/pages/System";
 
 function App() {
   const modalState = useSelector(sampleModalSelector);
-
   const appRef = useRef<HTMLDivElement | null>(null);
-
   return (
     <div
       className={`App ${modalState.isOpenModal ? "modal-height" : ""}`}

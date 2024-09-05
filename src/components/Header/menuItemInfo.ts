@@ -15,7 +15,7 @@ interface MenuItem {
 const menuItemInfo: MenuItem[] = [
   {
     title: "Systems",
-    url: "/",
+    url: "/systems",
     mode: HEADER_MENU_TYPE.NORMAL,
     submenu: [
       { title: "System overview", url: "/systems" },
@@ -27,7 +27,7 @@ const menuItemInfo: MenuItem[] = [
   },
   {
     title: "About us",
-    url: "/",
+    url: "/about-us",
     mode: HEADER_MENU_TYPE.NORMAL,
     submenu: [
       { title: "About us", url: "/about-us" },
