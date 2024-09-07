@@ -8,6 +8,7 @@ import Modal from "@/components/Modal/Modal";
 import Footer from "@/components/Footer/Footer";
 import Menu from "@/components/Header/Menu";
 import System from "@/pages/System";
+import PageNotFound from "@/pages/PageNotFound";
 
 function App() {
   const modalState = useSelector(sampleModalSelector);
@@ -29,7 +30,6 @@ function App() {
             </>
           }
         ></Route>
-        <Route path="/system" element={<System />} /> {/* /system 경로 추가 */}
       </Routes>
     </div>
   );
