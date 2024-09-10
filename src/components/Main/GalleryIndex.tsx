@@ -45,6 +45,7 @@ export default function GalleryIndex({
   }, [dropdown]);
 
   const onDropdown = () => {
+    console.log("dd");
     setDropdown((state) => !state);
     // console.log(dropdown);
   };

@@ -1,13 +1,14 @@
 .baswa-gallery {
   height: 100%;
+  z-index: 0;
 
   .index {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     align-items: center;
     // border: 4px solid pink;
     // @include flex-row;
-    position: relative;
 
     & > div {
       flex-basis: auto;
@@ -72,23 +73,22 @@
         & .submenu-container {
           z-index: 200;
           font-size: 0.8rem;
-          // border: 1px solid red;
           display: flex;
           flex-direction: column;
-          overflow-x: scroll;
+          justify-content: center;
+          align-items: center;
           transition: opacity 0.1s cubic-bezier(0.17, 0.67, 0.7, 0.55),
           visibility 0.8s cubic-bezier(0.17, 0.67, 0.7, 0.55);
           box-shadow: 3px 1px 25px -3px rgba(61, 61, 61, 0.75);
           position: relative;
-          top: 5%;
           left: 5%;
+
 
           &:hover {
             background: var(--darkBeige);
           }
 
           & > div {
-            // border: 1px solid pink;
             height: 100%;
             line-height: 100%;
           }
@@ -97,17 +97,19 @@
     }
 
     &_button {
-      width: 100%;
-      background: black;
-      height: 15%;
 
+      width: 100%;
+      display: flex;
+      margin-left: auto;
       & > button {
-        height: 100%;
-        width: 100%;
+        height: 66px;
+        width: 80%;
         background: black;
-        color: var(--lightBeige);
+        color: #d5c1b4;
         font-weight: 500;
+        font-size: 14px;
         cursor: pointer;
+        max-width: 25rem;
       }
     }
   }
@@ -130,8 +132,7 @@
     border-radius: 0 30px 0 0;
     width: 90%;
     position: relative;
-
-    height: 25rem;
+    height: 520px;
     padding: 2rem;
     display: flex;
     margin-bottom: 2rem;
@@ -139,7 +140,7 @@
 
     & > .index_title {
       width: 98%;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       font-weight: bolder;
       background: none;
       border: none;
@@ -148,6 +149,7 @@
       align-items: flex-start;
       justify-content: flex-start;
       flex-basis: 100px;
+
 
       & > p {
         width: 40%;
@@ -161,6 +163,9 @@
       width: 100%;
       transform: translateX(3%);
       height: auto;
+      z-index: 2;
+      position: absolute;
+      top: 140px;
 
       > .menu-container {
         position: relative;
@@ -174,6 +179,9 @@
           position: absolute;
           top: 80%;
           left: 10%;
+          //z-index: 2000;
+          margin-top: 10px;
+          cursor: pointer;
         }
       }
     }
@@ -184,10 +192,18 @@
       right: 0;
       width: 96%;
       height: 12%;
-      z-index: -1;
+      //border: 2px solid red;
+      transform: translateY(0px);
+      cursor: pointer;
+      z-index: 1;
 
       & > button {
+        //border: 2px solid blue;
+        position: absolute;
         width: 100%;
+        height: 100%;
+        max-width: 100%;
+        cursor: pointer;
       }
     }
   }

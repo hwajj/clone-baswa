@@ -11,7 +11,7 @@ interface DropdownProps {
 export default function Dropdown({ submenus, dropdown, mode }: DropdownProps) {
   return (
     <div
-      className={`${dropdown ? "block" : "none"} "z-[1000] absolute menu-shadow bg-white  top-[90%] w-full"`}
+      className={`${dropdown ? "block" : "none"} z-50 absolute menu-shadow bg-white  top-[90%] w-full"`}
       style={{
         width: mode === HEADER_MENU_TYPE.LANGUAGE ? "w-auto" : "267%", // LANGUAGE일 때 width 제한
       }}

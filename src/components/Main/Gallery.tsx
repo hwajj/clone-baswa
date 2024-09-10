@@ -25,12 +25,12 @@ export default function Gallery({ galleryIndexRef, allRefs }: GalleryProps) {
         <div className="index_title">
           <p>Find the right acoustic system</p>
         </div>
+
         <div className="index_choice" ref={indexRef} onClick={onShowToggleMenu}>
           {galleryChoiceData.map((data, i) => {
             return <GalleryIndex key={i} data={data} index={i} />;
           })}
         </div>
-
         <div className="index_button">
           <button>Find System</button>
         </div>
